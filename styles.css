@@ -1576,12 +1576,6 @@ input[type="range"] {
   margin-block: 1.2rem;
 }
 
-@media (min-width: 740px) {
-  .price-compare-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .price-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1623,6 +1617,13 @@ input[type="range"] {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--muted);
+}
+
+.price-sub {
+  margin: -0.35rem 0 0.85rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--teal);
 }
 
 .price-card ul {
