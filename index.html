@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Time — Умный порядок в детском бассейне</title>
+  <meta name="description" content="Интерактивная демо-версия автоматизации детского бассейна Family Time: единое расписание, абонементы в 1 клик, бот в MAX и умный помощник.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 28 28" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <path d="M3 11c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0 5-2.5 7 0"/>
+            <path d="M3 18c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0 5-2.5 7 0"/>
+          </svg>
+        </span>
+        <span>
+          <strong>Family Time</strong>
+          <span class="brand-sub">Умный порядок в бассейне</span>
+        </span>
+      </a>
+      <nav aria-label="Разделы страницы" class="top-nav">
+        <a href="#benefits">Выгоды</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#simulator">Попробовать</a>
+        <a href="#compare">Было / Стало</a>
+        <a href="#plan">Запуск</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Интерактивная демо-версия для «Family Time»
+        </div>
+        <h1>Спокойная работа для 2 администраторов и полный порядок для владельца</h1>
+        <p class="hero-lead">
+          Один понятный экран вместо бумажного журнала и Excel, бесплатный бот в MAX для родителей и тренеров
+          и умный помощник, который разбирает справки и переносы — но меняет расписание только с вашего согласия.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-sun" href="#simulator">Попробовать живую демку ↓</a>
+          <a class="btn btn-glass" href="#calculator">Посчитать экономию времени</a>
+        </div>
+
+        <div class="kpi-grid" aria-label="Главные результаты">
+          <article class="kpi-card">
+            <div class="kpi-icon kpi-teal" aria-hidden="true">⚡</div>
+            <div class="kpi-value">2 сек</div>
+            <div class="kpi-label">Отметка явки в 1 клик — занятие списывается само</div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-icon kpi-blue" aria-hidden="true">🛡️</div>
+            <div class="kpi-value">0</div>
+            <div class="kpi-label">Накладок: система не даст записать двоих на одно место</div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-icon kpi-sun" aria-hidden="true">💬</div>
+            <div class="kpi-value">−70%</div>
+            <div class="kpi-label">Ручной переписки с родителями и тренерами</div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-icon kpi-mint" aria-hidden="true">💎</div>
+            <div class="kpi-value">~700–1 600 ₽</div>
+            <div class="kpi-label">В месяц за всё, без доплат за новых детей и админов</div>
+          </article>
+        </div>
+      </div>
+
+      <svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,32 C240,74 480,0 720,36 C960,72 1200,10 1440,38 L1440,70 L0,70 Z" fill="var(--bg)"/>
+      </svg>
+    </section>
+
+    <section id="benefits" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Польза для всей команды</span>
+            <h2>Что получает владелец и что получают администраторы</h2>
+            <p class="section-sub">Переключите фильтр, чтобы увидеть главные плюсы для своей роли.</p>
+          </div>
+          <div class="pill-switch" role="group" aria-label="Фильтр преимуществ по ролям">
+            <button type="button" class="pill-switch-btn is-active" data-role-filter="all" aria-pressed="true">Все выгоды</button>
+            <button type="button" class="pill-switch-btn" data-role-filter="owner" aria-pressed="false">Владельцу</button>
+            <button type="button" class="pill-switch-btn" data-role-filter="admin" aria-pressed="false">Администраторам</button>
+          </div>
+        </div>
+
+        <div id="benefits-grid" class="benefits-grid">
+          <article class="benefit-card" data-role="admin">
+            <div class="benefit-top">
+              <span class="benefit-emoji" aria-hidden="true">📅</span>
+              <span class="role-tag role-admin">Администраторам</span>
+            </div>
+            <h3>Один экран вместо журнала и Excel</h3>
+            <p>Расписание, остатки абонементов и сроки справок видны сразу. Отметили приход ребёнка — занятие списалось автоматически.</p>
+          </article>
+
+          <article class="benefit-card" data-role="admin">
+            <div class="benefit-top">
+              <span class="benefit-emoji" aria-hidden="true">💻</span>
+              <span class="role-tag role-admin">Администраторам</span>
+            </div>
+            <h3>Переписка с компьютера, а не с одного телефона</h3>
+            <p>Живые чаты удобно вести на рабочем компьютере, а бот в MAX сам шлёт напоминания и отвечает на вопросы «сколько стоит?» и «что взять?».</p>
+          </article>
+
+          <article class="benefit-card" data-role="admin">
+            <div class="benefit-top">
+              <span class="benefit-emoji" aria-hidden="true">🏊</span>
+              <span class="role-tag role-admin">Администраторам</span>
+            </div>
+            <h3>Тренеры больше не спрашивают «кто у меня сегодня?»</h3>
+            <p>Каждое утро в 08:00 бот сам отправляет каждому тренеру его точный список детей на день.</p>
+          </article>
+
+          <article class="benefit-card" data-role="owner">
+            <div class="benefit-top">
+              <span class="benefit-emoji" aria-hidden="true">👀</span>
+              <span class="role-tag role-owner">Владельцу</span>
+            </div>
+            <h3>Полная прозрачность обеих смен</h3>
+            <p>Видно с телефона в любой момент: сколько детей пришло, кто из админов продлил абонемент и сколько занятий провёл каждый тренер.</p>
+          </article>
+
+          <article class="benefit-card" data-role="owner">
+            <div class="benefit-top">
+              <span class="benefit-emoji" aria-hidden="true">📊</span>
+              <span class="role-tag role-owner">Владельцу</span>
+            </div>
+            <h3>Вечерний отчёт в 21:00 прямо в MAX</h3>
+            <p>Не нужно звонить в конце дня — в 21:00 приходит короткая сводка: визиты, заморозки и у кого осталось последнее занятие.</p>
+          </article>
+
+          <article class="benefit-card" data-role="owner">
+            <div class="benefit-top">
+              <span class="benefit-emoji" aria-hidden="true">✅</span>
+              <span class="role-tag role-owner">Владельцу</span>
+            </div>
+            <h3>Безопасно: помощник ничего не меняет сам</h3>
+            <p>Он распознаёт фото справки и находит свободное окно для переноса, но изменения применяются только после клика администратора.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculator" class="section section-tint">
+      <div class="container">
+        <div class="calc-card">
+          <div class="calc-head">
+            <span class="eyebrow">Калькулятор выгоды</span>
+            <h2>Сколько времени освободится у администраторов «Family Time»?</h2>
+            <p class="section-sub">Подвигайте ползунки под примерную загрузку вашего бассейна.</p>
+          </div>
+
+          <div class="calc-layout">
+            <div class="calc-controls">
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <label for="calc-kids">Детей на занятиях в день</label>
+                  <output id="calc-kids-val" class="slider-val" for="calc-kids">30</output>
+                </div>
+                <input id="calc-kids" type="range" min="10" max="80" step="2" value="30">
+                <div class="slider-scale"><span>10</span><span>45</span><span>80</span></div>
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-label-row">
+                  <label for="calc-msgs">Сообщений от родителей и тренеров в день</label>
+                  <output id="calc-msgs-val" class="slider-val" for="calc-msgs">45</output>
+                </div>
+                <input id="calc-msgs" type="range" min="15" max="120" step="5" value="45">
+                <div class="slider-scale"><span>15</span><span>65</span><span>120</span></div>
+              </div>
+
+              <div class="calc-breakdown" id="calc-breakdown"></div>
+            </div>
+
+            <div class="calc-results" aria-live="polite">
+              <div class="calc-hero-stat">
+                <span class="calc-stat-label">Экономия времени в неделю</span>
+                <strong id="calc-week-hours" class="calc-big-num">14 ч</strong>
+                <span class="calc-stat-note">у двух администраторов вместе</span>
+              </div>
+              <div class="calc-sub-grid">
+                <div class="calc-mini-box">
+                  <span class="calc-stat-label">За месяц</span>
+                  <strong id="calc-month-hours">60 ч</strong>
+                </div>
+                <div class="calc-mini-box">
+                  <span class="calc-stat-label">Это примерно</span>
+                  <strong id="calc-shifts">7.5 смен</strong>
+                </div>
+              </div>
+              <p class="calc-tip">
+                Это время девочки смогут тратить на тёплую встречу семей, запись новых клиентов и спокойный порядок на ресепшене.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulator" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Живая интерактивная демка</span>
+            <h2>Попробуйте сами — всё кликается за 30 секунд</h2>
+            <p class="section-sub">
+              Все имена и цифры вымышленные. После каждого нажатия внизу появится короткая подсказка, в чём именно выгода.
+            </p>
+          </div>
+          <div class="sim-toolbar">
+            <div class="shift-switch" role="group" aria-label="Активная смена администратора">
+              <span class="shift-label">Смена:</span>
+              <button type="button" class="shift-btn is-active" data-admin="Елена (смена 1)" aria-pressed="true">Елена</button>
+              <button type="button" class="shift-btn" data-admin="Влада (смена 2)" aria-pressed="false">Влада</button>
+            </div>
+            <button type="button" id="reset-demo-btn" class="btn btn-ghost">↺ Сбросить</button>
+          </div>
+        </div>
+
+        <div class="guided-steps" aria-label="Мини-гид по демке">
+          <div class="step-chip" id="step-1">
+            <span class="step-check" aria-hidden="true">1</span>
+            <span>Нажмите <strong>«Отметить явку ✓»</strong> у любого ребёнка</span>
+          </div>
+          <div class="step-chip" id="step-2">
+            <span class="step-check" aria-hidden="true">2</span>
+            <span>Нажмите сценарий <strong>родителя в MAX</strong> (болезнь или перенос)</span>
+          </div>
+          <div class="step-chip" id="step-3">
+            <span class="step-check" aria-hidden="true">3</span>
+            <span>Нажмите <strong>«Подтвердить ✓»</strong> в черновике помощника</span>
+          </div>
+        </div>
+
+        <div class="mobile-view-switch" role="tablist" aria-label="Переключение экрана на телефоне">
+          <button type="button" class="mob-switch-btn is-active" id="mob-btn-panel" data-mob-view="panel" aria-selected="true">
+            📋 Экран админа
+          </button>
+          <button type="button" class="mob-switch-btn" id="mob-btn-max" data-mob-view="max" aria-selected="false">
+            💬 Чат MAX и помощник
+            <span id="mob-pending-badge" class="mob-badge" hidden>0</span>
+          </button>
+        </div>
+
+        <div id="sim-layout" class="sim-layout" data-mob-view="panel">
+          <div class="panel-card sim-col-panel">
+            <div class="panel-top">
+              <div>
+                <h3 class="panel-title">Экран администратора · Family Time</h3>
+                <p class="panel-meta">Сегодня, четверг · Сейчас работает: <strong id="active-admin-label">Елена (смена 1)</strong></p>
+              </div>
+              <div class="day-counters" id="day-counters" aria-live="polite"></div>
+            </div>
+
+            <div class="tabs-shell">
+              <div class="tablist" role="tablist" aria-label="Разделы панели администратора">
+                <button type="button" role="tab" id="tab-schedule" class="tab-btn" aria-selected="true" tabindex="0">Расписание</button>
+                <button type="button" role="tab" id="tab-clients" class="tab-btn" aria-selected="false" tabindex="-1">Семьи и справки</button>
+                <button type="button" role="tab" id="tab-trainers" class="tab-btn" aria-selected="false" tabindex="-1">Тренеры и история</button>
+              </div>
+
+              <div role="tabpanel" id="panel-schedule" aria-labelledby="tab-schedule" tabindex="0">
+                <div class="tabpanel-inner">
+                  <div class="legend" aria-label="Обозначения">
+                    <span><i class="dot dot-green"></i> Подтверждён</span>
+                    <span><i class="dot dot-amber"></i> Ждёт ответа</span>
+                    <span><i class="dot dot-red"></i> Заморожен</span>
+                    <span>⚠️ Последнее занятие</span>
+                    <span>🩺 Справка истекает</span>
+                  </div>
+                  <div id="schedule-list" class="schedule-list"></div>
+                </div>
+              </div>
+
+              <div role="tabpanel" id="panel-clients" aria-labelledby="tab-clients" hidden="until-found">
+                <div class="tabpanel-inner">
+                  <div class="clients-toolbar">
+                    <label for="client-search" class="sr-only">Поиск ребёнка или родителя</label>
+                    <input id="client-search" type="search" class="search-input" placeholder="Поиск по имени ребёнка, родителя или телефону...">
+                    <span class="search-hint">Остатки меняются сразу при отметке явки</span>
+                  </div>
+                  <div tabindex="0" role="region" aria-labelledby="clients-table-caption" class="table-wrapper">
+                    <table class="clients-table">
+                      <caption id="clients-table-caption">Семьи, остатки абонементов и сроки справок</caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Ребёнок</th>
+                          <th scope="col">Родитель</th>
+                          <th scope="col">Абонемент</th>
+                          <th scope="col">Справка</th>
+                          <th scope="col">Действие</th>
+                        </tr>
+                      </thead>
+                      <tbody id="clients-tbody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div role="tabpanel" id="panel-trainers" aria-labelledby="tab-trainers" hidden="until-found">
+                <div class="tabpanel-inner">
+                  <h4 class="subhead">Занятия тренеров за сегодня (для расчёта зарплаты)</h4>
+                  <div id="trainers-summary" class="trainers-grid"></div>
+                  <h4 class="subhead">История действий (видно, какая смена что сделала)</h4>
+                  <ul id="audit-log-list" class="audit-list" aria-live="polite"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="side-column sim-col-max" aria-label="Умный помощник и симулятор чата MAX">
+            <section class="hermes-card" id="hermes-card">
+              <div class="card-head-row">
+                <div>
+                  <h3>✨ Черновики умного помощника</h3>
+                  <p class="muted-sm">Ничего не меняет сам — ждёт подтверждения админа в 1 клик</p>
+                </div>
+                <span class="badge-count" id="pending-count">0</span>
+              </div>
+              <div id="pending-list" class="pending-list" aria-live="polite"></div>
+            </section>
+
+            <section class="phone-card">
+              <div class="phone-header">
+                <div>
+                  <strong>MAX · Бот «Family Time»</strong>
+                  <span class="phone-sub">Так чат выглядит у родителей</span>
+                </div>
+                <span class="online-pill">онлайн</span>
+              </div>
+
+              <div id="max-chat-log" class="chat-log" aria-live="polite"></div>
+
+              <div class="chat-scenarios">
+                <div class="scenario-title">Нажмите, чтобы сыграть за родителя:</div>
+                <button type="button" class="scenario-btn" data-scenario="confirm-masha">
+                  <span class="sc-num">1</span>
+                  <span>Мама Маши (10:00) жмёт кнопку <strong>«Придём ✅»</strong></span>
+                </button>
+                <button type="button" class="scenario-btn" data-scenario="illness-vasya">
+                  <span class="sc-num">2</span>
+                  <span>Мама Васи (11:00): <strong>«Заболел, вот фото справки» 🤒</strong></span>
+                </button>
+                <button type="button" class="scenario-btn" data-scenario="reschedule-kira">
+                  <span class="sc-num">3</span>
+                  <span>Папа Киры (11:00): <strong>«Перенесите с 11:00 на 16:00» 🔄</strong></span>
+                </button>
+                <button type="button" class="scenario-btn scenario-faq" data-scenario="faq-new">
+                  <span class="sc-num">4</span>
+                  <span>Новый клиент: <strong>«Сколько стоит и что взять с собой?» 💬</strong></span>
+                </button>
+              </div>
+
+              <div class="cron-preview-bar">
+                <div class="scenario-title">Посмотреть автоматические сводки (бесплатно):</div>
+                <div class="cron-btn-row">
+                  <button type="button" class="btn btn-sm" id="preview-trainer-btn">☀️ Тренеру в 08:00</button>
+                  <button type="button" class="btn btn-sm" id="preview-owner-btn">🌙 Владельцу в 21:00</button>
+                </div>
+                <pre id="cron-preview-output" class="cron-output" hidden></pre>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="section section-tint">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Наглядная разница</span>
+            <h2>Было → Стало: где исчезает лишняя рутина</h2>
+            <p class="section-sub">Сравните 5 ежедневных ситуаций в бассейне.</p>
+          </div>
+          <div class="pill-switch" role="group" aria-label="Режим просмотра сравнения">
+            <button type="button" class="pill-switch-btn is-active" data-compare-mode="both" aria-pressed="true">Оба сразу</button>
+            <button type="button" class="pill-switch-btn" data-compare-mode="before" aria-pressed="false">Было</button>
+            <button type="button" class="pill-switch-btn" data-compare-mode="after" aria-pressed="false">Станет</button>
+          </div>
+        </div>
+
+        <div id="compare-grid" class="compare-grid" data-mode="both">
+          <article class="compare-row">
+            <div class="compare-topic">
+              <span class="topic-num">01</span>
+              <h3>Расписание на день</h3>
+              <span class="save-badge">5–10 мин → 1 взгляд</span>
+            </div>
+            <div class="compare-before">
+              <span class="state-tag tag-before">Было: Бумажный журнал</span>
+              <p>Нельзя посмотреть вдвоём или с телефона владельца. Зачёркивания, помарки, риск записать двоих к одному тренеру на одно время.</p>
+            </div>
+            <div class="compare-after">
+              <span class="state-tag tag-after">Станет: Единый экран</span>
+              <p>Оба администратора и владелец видят живое расписание. Двойная запись и переполнение чаши заблокированы автоматически.</p>
+            </div>
+          </article>
+
+          <article class="compare-row">
+            <div class="compare-topic">
+              <span class="topic-num">02</span>
+              <h3>Абонементы и справки</h3>
+              <span class="save-badge">Без ручной сверки</span>
+            </div>
+            <div class="compare-before">
+              <span class="state-tag tag-before">Было: Таблица Excel</span>
+              <p>После каждого занятия нужно искать фамилию и вручную вычитать 1. Просроченную справку часто замечают уже у бортика.</p>
+            </div>
+            <div class="compare-after">
+              <span class="state-tag tag-after">Станет: 1 клик + подсказки</span>
+              <p>Нажали «Отметить явку» — занятие списалось (дважды списать нельзя). Система заранее подсвечивает ⚠️ 1 занятие и 🩺 справку.</p>
+            </div>
+          </article>
+
+          <article class="compare-row">
+            <div class="compare-topic">
+              <span class="topic-num">03</span>
+              <h3>Переписка с родителями</h3>
+              <span class="save-badge">−70% однотипных чатов</span>
+            </div>
+            <div class="compare-before">
+              <span class="state-tag tag-before">Было: Один рабочий телефон</span>
+              <p>Телефон передают из рук в руки, печатать долго, одни и те же вопросы каждый день: «во сколько нам?», «сколько осталось?», «что взять?».</p>
+            </div>
+            <div class="compare-after">
+              <span class="state-tag tag-after">Станет: ПК + бесплатный бот MAX</span>
+              <p>Живые диалоги ведутся удобно с компьютера. А напоминания за сутки, остаток и ответы на частые вопросы берёт на себя бот.</p>
+            </div>
+          </article>
+
+          <article class="compare-row">
+            <div class="compare-topic">
+              <span class="topic-num">04</span>
+              <h3>Вопросы от тренеров</h3>
+              <span class="save-badge">0 лишних созвонов</span>
+            </div>
+            <div class="compare-before">
+              <span class="state-tag tag-before">Было: Утренние сообщения</span>
+              <p>Тренеры пишут админам: «кто у меня сегодня?», «Петрова перенесли?». В конце месяца — долгий подсчёт проведённых занятий.</p>
+            </div>
+            <div class="compare-after">
+              <span class="state-tag tag-after">Станет: Список в 08:00 + итоги</span>
+              <p>Каждое утро бот присылает тренеру его расписание. Все проведённые занятия автоматически считаются в сводке для зарплаты.</p>
+            </div>
+          </article>
+
+          <article class="compare-row">
+            <div class="compare-topic">
+              <span class="topic-num">05</span>
+              <h3>Болезнь, справка и перенос</h3>
+              <span class="save-badge">10 сообщений → 1 клик</span>
+            </div>
+            <div class="compare-before">
+              <span class="state-tag tag-before">Было: Ручной поиск</span>
+              <p>Родитель присылает фото справки → админ разбирает дату, ищет свободное окно в журнале, правит Excel и отвечает вручную.</p>
+            </div>
+            <div class="compare-after">
+              <span class="state-tag tag-after">Станет: Черновик на 1 клик</span>
+              <p>Умный помощник сам читает справку, находит свободное окно и присылает готовую карточку админу. Остаётся нажать «Подтвердить».</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan" class="section">
+      <div class="container">
+        <span class="eyebrow">Понятный бюджет и мягкий переход</span>
+        <h2>Сколько это стоит и как запустим без стресса</h2>
+
+        <div class="price-compare-grid">
+          <article class="price-card">
+            <div class="price-tag">Готовые программы (CRM)</div>
+            <div class="price-num">~2 500–5 500 ₽<span>/мес</span></div>
+            <ul>
+              <li>Подписка за программу + платный коннектор для MAX</li>
+              <li>Много лишних кнопок, которые путают администраторов</li>
+              <li>Часто есть лимит на число клиентов или филиалов</li>
+            </ul>
+          </article>
+
+          <article class="price-card price-card-best">
+            <div class="price-tag tag-best">Решение для «Family Time»</div>
+            <div class="price-num">~700–1 600 ₽<span>/мес</span></div>
+            <ul>
+              <li>Официальный бот в MAX работает <strong>бесплатно</strong></li>
+              <li>Интерфейс заточен именно под 2 смены вашего бассейна</li>
+              <li>Без ограничений по числу детей, групп и администраторов</li>
+            </ul>
+          </article>
+        </div>
+
+        <ol class="steps-grid">
+          <li>
+            <span class="step-badge">Шаг 1</span>
+            <strong>Переносим вашу таблицу</strong>
+            <p>Берём текущий Excel и сетку чаш/тренеров, аккуратно переносим все активные абонементы.</p>
+          </li>
+          <li>
+            <span class="step-badge">Шаг 2</span>
+            <strong>Запускаем экран расписания</strong>
+            <p>Администраторы начинают вести запись и явки на компьютере — бумажный журнал больше не нужен.</p>
+          </li>
+          <li>
+            <span class="step-badge">Шаг 3</span>
+            <strong>Подключаем бота MAX и помощника</strong>
+            <p>Включаем напоминания родителям, утренние списки тренерам, вечерний отчёт владельцу и разбор справок.</p>
+          </li>
+          <li>
+            <span class="step-badge">Шаг 4</span>
+            <strong>Мягкий пилот 3–5 дней</strong>
+            <p>Сверяем всё в живой работе, подстраиваем мелочи под привычки администраторов и полностью переходим.</p>
+          </li>
+        </ol>
+
+        <details class="tech-spoiler">
+          <summary>Надёжность и защита данных — почему ничего не сломается</summary>
+          <div class="tech-spoiler-body">
+            <ul>
+              <li><strong>Расписание и абонементы не зависят от нейросети:</strong> даже если сервис ИИ временно недоступен, экран администраторов, списание занятий и кнопки в MAX продолжают работать без сбоев.</li>
+              <li><strong>Ежедневное резервное копирование:</strong> база автоматически сохраняется каждую ночь — данные семей и абонементов не потеряются.</li>
+              <li><strong>Живой контроль человека:</strong> помощник не имеет прав сам менять расписание или списывать деньги — он только готовит черновики на подтверждение администратору.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Демо-прототип для детского бассейна <strong>«Family Time»</strong> · Все имена и цифры в симуляторе вымышленные</span>
+      <a href="#simulator">Наверх к демке ↑</a>
+    </div>
+  </footer>
+
+  <div id="benefit-toast" class="benefit-toast" role="status" aria-live="polite" hidden>
+    <div class="toast-body">
+      <strong id="toast-title"></strong>
+      <p id="toast-text"></p>
+    </div>
+    <button type="button" id="toast-close" class="toast-close" aria-label="Закрыть подсказку">×</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
